@@ -67,10 +67,10 @@ class EmployeeSerializer(serializers.ModelSerializer):
 
     def get_phone_num_text(self, obj):
         analyzer = AnalyzerEngine()
-        text = "His name is Mr. Jones and his phone number is 212-555-5555"
+        text = "Vaibhav and अनाभ्रा and his phone number is 212-555-5555, 9999988888, fireman@gmail.com"
         analyzer_results = analyzer.analyze(
             text=text,
-            entities=["PHONE_NUMBER"],
+            entities=["PHONE_NUMBER", "EMAIL_ADDRESS", "PERSON"],
             language="en",
         )
 
