@@ -1,0 +1,30 @@
+# Enable pycodestyle (`E`, `W`), Pyflakes (`F`), isort (`I`), flake8-import-conventions (`ICN`),
+# flake8-tidy-imports (`TID`), PyUpgrade (`UP`). ref - https://beta.ruff.rs/docs/rules/
+select = [
+    'E', 'F', 'I', 'ICN', 'TID',
+    'UP', 'W', 'SIM', 'B', 'A', 'TRY',
+    'Q', 'COM', 'PERF','RUF', 'PGH',
+    'ISC', 'PLR2004'
+]
+ignore = ['TRY003']
+line-length = 120
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+
+[mccabe]
+# Unlike Flake8, default to a complexity level of 10, have't enabled this yet(C90).
+max-complexity = 10
+
+[per-file-ignores]
+# ignore settings.py file
+"master_of_sales/settings/*.py"= ["F403", "F405"]
+"*/commands/*.py"= ["A003"]
+"*/migrations/*.py"= ["RUF012"]
+"*/tests/*.py"= ["RUF012"]
+"*/admin.py"= ["RUF012"]
