@@ -19,7 +19,8 @@
    client = Client.objects.create(schema_name='bigco', name='bigco')
    domain = Domain.objects.create(tenant=client, domain='bigco.localhost', is_primary=True)
    ```
-   Note : Use `.localhost` in domain if u want to access admin panel in browser.
 12. Run `python manage.py migrate_schemas --shared`
 
 Ref Video - https://www.youtube.com/watch?v=uvaO85GbdzA
+
+Note : Use `.localhost` in domain if u want to access admin panel in browser.
