@@ -1,0 +1,103 @@
+*.py[cod]
+*.log
+*.pot
+
+# Pyenv
+.python-version
+venv_path
+
+# Unit test / coverage reports
+.coverage
+.tox
+htmlcov
+
+# Translations
+*.mo
+
+# Developer
+.pydevproject
+.project
+.settings/
+.idea/
+.DS_Store
+*~
+*-local.scss
+dump.rdb
+
+# Celery Beat
+celerybeat-schedule
+celerybeat-schedule.bak
+celerybeat.pid
+
+# locals
+static-tmp
+media
+*.sqlite3
+.env
+local.py
+.sass-cache
+data/
+/node_modules/
+*bower_components/
+reports/
+squadrun/data
+*.ipynb
+deployment/celery_server/worker_stats.html
+test_results/
+
+# local test settings
+squadrun/settings/test_settings_keepdb.py
+squadrun/settings/test_settings_nomigration.py
+squadrun/settings/local_test.py
+
+# editors
+.vscode
+
+/pg_data/
+
+# virtual envs
+black_virtual_env/
+venv/**
+.venv/**
+
+# lambda
+lambda_scripts/*/.venv/
+lambda_scripts/*/.chalice/
+
+**/react/build/
+
+# vscode
+.devcontainer
+.vscode
+tox.ini
+
+# local docker setup
+.dockerignore
+.squadiq
+compose.yml
+compose.**.yml
+
+docker-compose.yml
+docker-compose-dev.yml
+docker-sync.yml
+Dockerfile
+# n8n
+.cache
+.n8n
+
+# local
+notebooks/**
+swatch.sh
+
+# firebase creds
+apps/common/firebase/firebase_creds.json
+lead_conversion_summary_report/*
+
+# sonarsource
+.scannerwork
+
+file.xlsx
+
+# db dump file
+staging_db.sql.zst
+staging_db.sql
